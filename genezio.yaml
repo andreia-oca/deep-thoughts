@@ -1,0 +1,24 @@
+backend:
+    functions:
+        - entry: index.py
+          handler: handler
+          name: function-django
+          path: .
+          type: django
+    language:
+        name: js
+    path: .
+    scripts:
+        deploy:
+            - npm install
+        local:
+            - npm install
+name: my-project
+nextjs:
+    packageManager: npm
+    path: .
+    scripts:
+        deploy:
+            - npm install
+region: us-east-1
+yamlVersion: 2
