@@ -1,18 +1,13 @@
 backend:
     functions:
-        - entry: server.js
+        - entry: index.mjs
           handler: handler
-          name: function-node-function
+          name: function-express
           path: .
-          type: node-function
+          type: httpServer
     language:
         name: js
-    path: .
-    scripts:
-        deploy:
-            - npm install
-        local:
-            - npm install
-name: brown-crucial-tahr
+    path: ./
+name: test
 region: us-east-1
 yamlVersion: 2
